@@ -1,4 +1,4 @@
-package mx.tecnm.ladm_u4_proyectoalumno_18401083.Sockets
+package mx.tecnm.ladm_u4_proyectoalumno_18401083.Cliente
 
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothSocket
@@ -9,7 +9,7 @@ import mx.tecnm.ladm_u4_proyectoalumno_18401083.interfaces.OnSocketReceive
 import java.io.IOException
 import java.util.*
 
-class BClientSocket(device: BluetoothDevice, uuid: UUID, onHandlerM: OnHandlerMsg, onReceive: OnSocketReceive):Thread() {
+class Cliente(device: BluetoothDevice, uuid: UUID, onHandlerM: OnHandlerMsg, onReceive: OnSocketReceive):Thread() {
     private lateinit var bluetoothSocket: BluetoothSocket
     private var onHandlerMsg = onHandlerM
     private var onSocketReceive = onReceive

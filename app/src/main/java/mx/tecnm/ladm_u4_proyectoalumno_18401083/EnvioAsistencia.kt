@@ -14,7 +14,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import mx.tecnm.ladm_u4_proyectoalumno_18401083.Sockets.BClientSocket
+import mx.tecnm.ladm_u4_proyectoalumno_18401083.Cliente.Cliente
 import mx.tecnm.ladm_u4_proyectoalumno_18401083.Util.BluetoothStateCustom
 import mx.tecnm.ladm_u4_proyectoalumno_18401083.databinding.ActivityEnvioAsistenciaBinding
 import mx.tecnm.ladm_u4_proyectoalumno_18401083.interfaces.OnHandlerMsg
@@ -80,7 +80,7 @@ class EnvioAsistencia : AppCompatActivity(){
              }
 
             listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-                val bClientSocket = BClientSocket(bluetoothDevices[position],uuid,object:
+                val bClientSocket = Cliente(bluetoothDevices[position],uuid,object:
                     OnHandlerMsg {
                     override fun onMsgGet(msg: Message) {
                         handler.sendMessage(msg)
@@ -223,8 +223,8 @@ class EnvioAsistencia : AppCompatActivity(){
             R.id.opAcerca->{
                 AlertDialog.Builder(this)
                     .setMessage("Alumno: Serrano Nuño Sergio Armando\n" +
-                            "Docente: MTI SERGIO BENIGNO CASTILLO VALTIERRA" +
-                            "Asignatura: LABORATORIO DE APLICACIONES PARA DISPOSITIVOS MOVILES" +
+                            "Docente: MTI SERGIO BENIGNO CASTILLO VALTIERRA\n" +
+                            "Asignatura: LABORATORIO DE APLICACIONES PARA DISPOSITIVOS MOVILES\n" +
                             "Instituto Tecnológico de Tepic")
                     .show()
             }
