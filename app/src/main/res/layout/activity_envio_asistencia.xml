@@ -33,7 +33,7 @@
         android:layout_marginTop="10dp"
         />
     <TextView
-        android:text="Devices list"
+        android:text="Lista de dispositivos"
         android:layout_marginBottom="20dp"
         android:textSize="25sp"
         android:textAlignment="center"
