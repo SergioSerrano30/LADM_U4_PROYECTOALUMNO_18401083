@@ -14,7 +14,6 @@
         android:textSize="25dp"
         android:textAlignment="center"
         android:id="@+id/lblNoControl"
-        android:layout_marginBottom="20dp"
         />
     <TextView
         android:id="@+id/tvStatus"
@@ -30,7 +29,6 @@
         android:layout_height="wrap_content"
         android:text="Lista de dispositivos"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         />
     <TextView
         android:text="Lista de dispositivos"

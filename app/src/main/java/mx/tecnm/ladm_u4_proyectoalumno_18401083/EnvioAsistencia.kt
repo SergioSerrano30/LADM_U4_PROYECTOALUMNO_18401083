@@ -1,5 +1,6 @@
 package mx.tecnm.ladm_u4_proyectoalumno_18401083
 
+import android.app.AlertDialog
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothSocket
@@ -220,7 +221,12 @@ class EnvioAsistencia : AppCompatActivity(){
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.opAcerca->{
-
+                AlertDialog.Builder(this)
+                    .setMessage("Alumno: Serrano Nuño Sergio Armando\n" +
+                            "Docente: MTI SERGIO BENIGNO CASTILLO VALTIERRA" +
+                            "Asignatura: LABORATORIO DE APLICACIONES PARA DISPOSITIVOS MOVILES" +
+                            "Instituto Tecnológico de Tepic")
+                    .show()
             }
             R.id.opSalir->{
                 finish()
