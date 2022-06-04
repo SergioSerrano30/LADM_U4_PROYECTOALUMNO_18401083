@@ -163,7 +163,8 @@ class EnvioAsistencia : AppCompatActivity(), OnLocationListener {
                     }
                 })
                 bClientSocket.start()
-                tvStatus.text = "Connecting"
+                tvStatus.text = "Conectando..."
+                binding.tvStatus.setTextColor(Color.rgb(38, 77, 135))
             }
 
             /*btnSendFile.setOnClickListener {
@@ -288,15 +289,15 @@ class EnvioAsistencia : AppCompatActivity(), OnLocationListener {
             }
             BluetoothStateCustom.STATE_CONNECTED.state -> {
                 binding.tvStatus.text = "Status: Conectado!"
-                binding.tvStatus.setTextColor(Color.GREEN)
+                binding.tvStatus.setTextColor(Color.rgb(38, 135, 64))
             }
             BluetoothStateCustom.STATE_CONNECTING.state -> {
                 binding.tvStatus.text = "Status: Conectando..."
-                binding.tvStatus.setTextColor(Color.BLUE)
+                binding.tvStatus.setTextColor(Color.rgb(38, 77, 135))
             }
             BluetoothStateCustom.STATE_CONNECTION_FAILED.state -> {
                 binding.tvStatus.text = "Status: Falló la conexión :("
-                binding.tvStatus.setTextColor(Color.RED)
+                binding.tvStatus.setTextColor(Color.rgb(158, 30, 2))
             }
             /*BluetoothStateCustom.STATE_MESSAGE_RECEIVED.state -> {
                 val bytesRec:ByteArray = msg.obj as ByteArray
